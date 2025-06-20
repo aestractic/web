@@ -1,0 +1,61 @@
+---
+import { format, startOfMonth, endOfMonth, eachDayOfInterval, getDay, isToday } from 'date-fns';
+import { es } from 'date-fns/locale/es';
+
+const whatsappNumber = "2229300680";
+const defaultMessage = "¡Hola! Me gustaría saber más sobre tus servicios.";
+
+const today = new Date();
+const currentMonth = format(today, 'MMMM yyyy', { locale: es });
+const monthStart = startOfMonth(today);
+const monthEnd = endOfMonth(today);
+const days = eachDayOfInterval({ start: monthStart, end: monthEnd });
+
+// Calculate empty days at start of month for padding
+const startDay = getDay(monthStart);
+const emptyDays = Array(startDay).fill(null);
+---
+
+<div class="backdrop-blur-sm bg-dark/50 p-6 border border-dark-border shadow-xl">
+  <div class="mb-4">
+    <h3 class="text-light text-lg font-light mb-2">{currentMonth}</h3>
+    <div class="grid grid-cols-7 gap-2 text-center text-light-muted text-sm mb-2">
+      <div>L</div>
+      <div>M</div>
+      <div>X</div>
+      <div>J</div>
+      <div>V</div>
+      <div>S</div>
+      <div>D</div>
+    </div>
+    <div class="grid grid-cols-7 gap-2">
+      {emptyDays.map(() => (
+        <div class="aspect-square flex items-center justify-center text-light-muted"></div>
+      ))}
+      {days.map((day) => (
+        <div class={`
+          aspect-square flex items-center justify-center cursor-pointer
+          ${isToday(day) ? 'bg-primary text-dark font-medium' : 'text-light-muted hover:bg-dark-border'}
+          transition-colors duration-200
+        `}>
+          {format(day, 'd')}
+        </div>
+      ))}
+    </div>
+  </div>
+  
+  <button
+    class="w-full rounded-none bg-[#25D366] hover:bg-[#128C7E] flex items-center justify-center text-dark py-2"
+    id="whatsapp-button"
+  >
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2">
+      <path d="m22 2-7 20-4-9-9-4Z"></path>
+      <path d="M22 2 11 13"></path>
+    </svg>
+    Contacta via WhatsApp
+  </button>
+</div>
+
+<script>
+  // Client-side calendar functionality will be added here
+</script> 

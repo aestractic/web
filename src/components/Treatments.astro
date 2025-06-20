@@ -1,0 +1,157 @@
+---
+const treatments = [
+  {
+    name: "Microdermoabrasión",
+    description: " La microdermoabrasión con punta de diamante es un tratamiento indoloro que elimina suavemente las células muertas de las capas superficiales de tu piel, revelando una tez más fresca y luminosa.",
+    benefits: [
+      "Piel con mejor textura y un tono más uniforme, para un aspecto más liso.",
+      "Adiós al exceso de brillo, logrando una eliminación de la capa superficial.",
+      "Reduce la apariencia de líneas finas y cicatrices de acné, disminuyendo las imperfecciones."
+    ],
+    image: "/placeholder.svg?height=300&width=400",
+    whatsappMessage: "¡Hola! Me interesa el tratamiento de Microdermoabrasión con punta de diamante. ¿Podrías darme más información sobre el precio y disponibilidad? 💎✨"
+  },
+  {
+    name: "Skin Scrubber",
+    description: "El skin scrubber utiliza vibraciones ultrasónicas para una exfoliación profunda, rápida y sencilla, limpiando tu piel desde el interior.",
+    benefits: [
+      "Elimina impurezas y desobstruye los poros haciendo una ligera exfoliación.",
+      "Retira puntos negros, mejorando la claridad del cutis.",
+      "Reduce el exceso de sebo en la piel, ayudando a controlar el brillo. "
+    ],
+    image: "/placeholder.svg?height=300&width=400",
+    whatsappMessage: "¡Hola! Me gustaría agendar una cita para el tratamiento de Skin Scrubber. ¿Cuándo tienes disponibilidad? 🌟"
+  },
+  {
+    name: "Alta Frecuencia",
+    description: "La alta frecuencia utiliza electrodos de vidrio para generar una suave sensación de calor que libera ozono, ayudando a revitalizar la piel y a calmarla.",
+    benefits: [
+      "Oxigena la piel, promoviendo su regeneración.",
+      "Posee un efecto bactericida, ayudando a combatir el acné.",
+      "Favorece la cicatrización, contribuyendo a una piel más uniforme."
+    ],
+    image: "/placeholder.svg?height=300&width=400",
+    whatsappMessage: "¡Hola! Estoy interesada en el tratamiento de Alta Frecuencia para oxigenar mi piel. ¿Podrías contarme más detalles? ⚡️"
+  },
+  {
+    name: "Máscara De Led",
+    description: "La máscara LED utiliza luces de diferentes colores para actuar directamente sobre la piel, mejorando visiblemente su aspecto y tratando diversas afecciones de manera personalizada.",
+    benefits: [
+      "Disminuye visiblemente las manchas, unificando el tono de la piel.",
+      "Calma la piel irritada, proporcionando alivio y reduciendo el enrojecimiento.",
+      "Combate eficazmente el acné, ayudando a prevenir brotes y dando un efecto calmante."
+    ],
+    image: "/placeholder.svg?height=300&width=400",
+    whatsappMessage: "¡Hola! Me interesa mucho la terapia con Máscara LED. ¿Qué colores recomendarías para mi tipo de piel? 💡🌈"
+  },
+  {
+    name: "Ultrasonido Facial",
+    description: "El ultrasonido facial es un tratamiento no invasivo que, a través de un cabezal, transmite ondas ultrasónicas de baja frecuencia y alta potencia. Este proceso nos ayudará a la producción de colágeno y elastina dejando una apariencia con efecto lifting.",
+    benefits: [
+      "Estimula la producción de colágeno, mejorando la elasticidad y firmeza de la piel.",
+      "Optimiza la oxigenación de la piel, dándole un aspecto más radiante y saludable.",
+      "Mejora la circulación sanguínea, favoreciendo la nutrición celular y la eliminación de toxinas."
+    ],
+    image: "/placeholder.svg?height=300&width=400",
+    whatsappMessage: "¡Hola! Quisiera más información sobre el Ultrasonido Facial para estimular colágeno. ¿Cuántas sesiones recomiendas? 🎵✨"
+  },
+  {
+    name: "Dermapen",
+    description: "El Dermapen es un innovador tratamiento que utiliza microagujas para crear microcanales controlados en la piel. Esto estimula la regeneración natural y permite corregir una amplia gama de imperfecciones tanto en el rostro como en diferentes zonas del cuerpo.",
+    benefits: [
+      "Disminuye la apariencia de estrías, ayudando a suavizar su textura.",
+      "Atenúa líneas finas de expresión, dando como resultado una apariencia uniforme",
+      "Mejora la textura de cicatrices e imperfecciones, promoviendo una piel más homogénea y saludable."
+    ],
+    image: "/placeholder.svg?height=300&width=400",
+    whatsappMessage: "¡Hola! Me interesa el tratamiento con Dermapen para mejorar cicatrices. ¿Podrías explicarme el proceso? 🔬💫"
+  },
+  {
+    name: "Hilos Absorbibles De Colágeno",
+    description: "Este es un tratamiento no invasivo que consiste en la inserción de hilos de sutura reabsorbibles biocompatibles en la piel. Estos hilos actúan como una guía, estimulando la producción natural de nuevas fibras de colágeno, lo que resulta en un efecto de soporte y una piel más firme y elástica con el tiempo.",
+    benefits: [
+      "Disminuye la apariencia de líneas finas de la piel, para un cutis más liso y rejuvenecido.",
+      "Favorece la formación de nuevas fibras de colágeno, restaurando la firmeza y elasticidad natural de la piel.",
+      "Mejora la calidad general de la piel, aportando un aspecto más vital y redensificado."
+    ],
+    image: "/placeholder.svg?height=300&width=400",
+    whatsappMessage: "¡Hola! Tengo interés en los Hilos Absorbibles de Colágeno para reafirmar mi piel. ¿Cuánto tiempo duran los resultados? 🧵✨"
+  },
+  {
+    name: "Hyaluron Pen",
+    description: "Esta es una innovadora pluma sin aguja que permite la aplicación de ácido hialurónico. Es ideal para quienes buscan mejorar el volumen y la hidratación de la piel de forma no invasiva, y funciona como un excelente complemento para potenciar los resultados de los hilos absorbibles de colágeno.",
+    benefits: [
+      "Crea un efecto lifting suave, mejorando la tensión y el contorno del rostro.",
+      "Reafirma la piel, aportando mayor densidad y elasticidad para un aspecto más terso.",
+      "Hidrata profundamente, mejorando la calidad y el aspecto general de la piel."
+    ],
+    image: "/placeholder.svg?height=300&width=400",
+    whatsappMessage: "¡Hola! Me llama la atención el Hyaluron Pen sin agujas. ¿Es realmente indoloro? ¿Qué zonas se pueden tratar? 💧🖊️"
+  },
+];
+
+const whatsappNumber = "2229300680";
+---
+
+<section id="treatments" class="w-full py-8 sm:py-12 md:py-24 lg:py-32 bg-dark relative overflow-hidden">
+  <div class="absolute -bottom-[30%] left-[10%] w-[60%] h-[60%] rounded-full bg-gradient-to-tr from-primary/10 to-secondary/5 blur-[100px]"></div>
+  <div class="container px-3 sm:px-4 md:px-6 relative z-10">
+    <h2 class="text-xl sm:text-2xl font-light tracking-wider md:text-3xl lg:text-4xl mb-6 sm:mb-8 text-center text-light">
+      Faciales
+    </h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 justify-items-center max-w-7xl mx-auto">
+      {treatments.map((treatment) => (
+        <div class="bg-dark-lighter border-none shadow-lg backdrop-blur-sm bg-opacity-80 overflow-hidden flex flex-col h-full rounded-lg sm:rounded-none w-full max-w-sm">
+          <img
+            src={treatment.image}
+            alt={treatment.name}
+            width="400"
+            height="300"
+            class="w-full object-cover h-40 sm:h-48 flex-shrink-0"
+          />
+          <div class="p-3 sm:p-4 flex-grow flex flex-col">
+            <h3 class="text-lg sm:text-xl font-serif font-medium mb-2 sm:mb-3 text-light tracking-wide min-h-[2.5rem] sm:min-h-[3.5rem] flex items-center">{treatment.name}</h3>
+            <p class="text-light-muted text-xs sm:text-sm mb-3 sm:mb-4 font-serif font-light leading-relaxed text-justify">{treatment.description}</p>
+            <div class="mb-3 sm:mb-4 flex-grow flex flex-col">
+              <p class="text-primary text-xs sm:text-sm font-serif font-medium italic mb-2 sm:mb-3">Beneficios:</p>
+              <ul class="text-primary text-xs sm:text-sm list-disc list-inside space-y-1 sm:space-y-2 flex-grow">
+                {treatment.benefits.map((benefit) => (
+                  <li class="font-serif font-light leading-relaxed text-justify pl-1">{benefit}</li>
+                ))}
+              </ul>
+            </div>
+          </div>
+          <div class="p-3 sm:p-4 pt-0 mt-auto">
+            <button
+              data-treatment={treatment.name}
+              data-whatsapp-message={treatment.whatsappMessage}
+              class="w-full rounded-lg sm:rounded-none border border-primary bg-transparent py-2.5 sm:py-3 text-xs sm:text-sm text-primary hover:bg-primary hover:text-dark transition-colors whatsapp-treatment-btn font-serif font-light flex items-center justify-center gap-1.5 sm:gap-2"
+            >
+              <svg class="w-4 h-4 sm:w-5 sm:h-5" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488"/>
+              </svg>
+              <span class="hidden sm:inline">Preguntar por WhatsApp</span>
+              <span class="sm:hidden">WhatsApp</span>
+            </button>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const whatsappButtons = document.querySelectorAll('.whatsapp-treatment-btn');
+    const whatsappNumber = '2229300680';
+    
+    whatsappButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        const message = button.getAttribute('data-whatsapp-message');
+        const encodedMessage = encodeURIComponent(message);
+        const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+        window.open(whatsappUrl, '_blank');
+      });
+    });
+  });
+</script> 
